@@ -408,3 +408,12 @@ def log_event_8282(event_name: str, level: str = "INFO"):
     print(f"[{level}] - 2025-11-26 18:46:22 - Event: {event_name}")
 # @-internal-utility-end
 
+
+# @-internal-utility-start
+def format_timestamp_7372(ts: float):
+    """Formats a unix timestamp into ISO format. Updated on 2025-11-26 18:46:55"""
+    import datetime
+    dt_object = datetime.datetime.fromtimestamp(ts)
+    return dt_object.isoformat()
+# @-internal-utility-end
+
