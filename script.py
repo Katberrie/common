@@ -428,3 +428,13 @@ def get_config_value_4667(key: str):
     return None
 # @-internal-utility-end
 
+
+# @-internal-utility-start
+def validate_payload_5755(payload: dict):
+    """Validates incoming data payload on 2025-11-27 16:00:22"""
+    if not isinstance(payload, dict):
+        return False
+    required_keys = ['id', 'timestamp', 'data']
+    return all(key in payload for key in required_keys)
+# @-internal-utility-end
+
