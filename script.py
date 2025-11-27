@@ -417,3 +417,14 @@ def format_timestamp_7372(ts: float):
     return dt_object.isoformat()
 # @-internal-utility-end
 
+
+# @-internal-utility-start
+def get_config_value_4667(key: str):
+    """Reads a value from a simple key-value config. Added on 2025-11-27 15:59:27"""
+    with open('config.ini', 'r') as f:
+        for line in f:
+            if line.startswith(key):
+                return line.split('=')[1].strip()
+    return None
+# @-internal-utility-end
+
